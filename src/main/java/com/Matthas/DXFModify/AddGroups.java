@@ -30,4 +30,36 @@ public class AddGroups {
             return aryLines;
         }
     }
+
+     public void CreateDXFPolylineGroup(Polyline polyline, ArrayList<String> DXFGroups) {
+        String handle = DXFDrawing.getNextSeed();
+        DXFGroups.add("  0");
+        DXFGroups.add("GROUP");
+        DXFGroups.add("  5");
+        DXFGroups.add(handle);
+        DXFGroups.add("102");
+        DXFGroups.add("{ACAD_REACTORS");
+        DXFGroups.add("330");
+        DXFGroups.add("D");
+        DXFGroups.add("102");
+        DXFGroups.add("}");
+        DXFGroups.add("330");
+        DXFGroups.add("D");
+        DXFGroups.add("100");
+        DXFGroups.add("AcDbGroup");
+        DXFGroups.add("300");
+        DXFGroups.add("");
+        DXFGroups.add(" 70");
+        DXFGroups.add("     1");
+        DXFGroups.add(" 71");
+        DXFGroups.add("     1");
+        DXFGroups.add("340");
+        DXFGroups.add(polyline.getHandle());
+         //assuming your polyline has already been build as Object and has Hashmap Grouped where other object are located (that you want to group with). Key should be Handle of the element.
+        for (Map.Entry<String, Object> entry : polyline.getGrouped().entrySet()) {
+            DXFGroups.add("340");
+            DXFGroups.add(String.valueOf(entry.getKey()));
+        }
+
+    }
 }
