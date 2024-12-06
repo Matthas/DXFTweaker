@@ -1,0 +1,5 @@
+ToleranceDPs=4.5
+SettingsFilePath=
+Test=Test
+FILECHOOSER=C:\
+DXFReaderVersion=0.01

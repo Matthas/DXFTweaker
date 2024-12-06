@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4eba9fed-f782-406f-86c7-0a788d7c1ca5" name="Changes" comment="First Version" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="f0e00c70-c43b-4f09-b8ad-8ebc147a8a2f" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2pQTSfeCyng1e01RmCoziEKZTVh" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main (1).executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/JavaProjects/DXFToolbox/src/main/java&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/JavaProjects/DXFToolbox/src/main/java/com/Matthas/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.CommitDialog&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\JavaProjects\DXFToolbox" />
+      <recent name="C:\JavaProjects\DXFToolbox\src\main\java" />
+      <recent name="C:\JavaProjects\DXFToolbox\src" />
+      <recent name="C:\JavaProjects\DXFToolbox\src\main\resources\Resources" />
+      <recent name="C:\JavaProjects\DXFToolbox\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main (1)">
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="DXFToolbox" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.Matthas.Main" />
+      <module name="DXFToolbox" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.Matthas.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4eba9fed-f782-406f-86c7-0a788d7c1ca5" name="Changes" comment="" />
+      <created>1732697304721</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1732697304721</updated>
+    </task>
+    <task id="LOCAL-00001" summary="e">
+      <option name="closed" value="true" />
+      <created>1733316541479</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1733316541479</updated>
+    </task>
+    <task id="LOCAL-00002" summary="e">
+      <option name="closed" value="true" />
+      <created>1733316600915</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1733316600915</updated>
+    </task>
+    <task id="LOCAL-00003" summary="First Version">
+      <option name="closed" value="true" />
+      <created>1733319839367</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1733319839367</updated>
+    </task>
+    <task id="LOCAL-00004" summary="First Version">
+      <option name="closed" value="true" />
+      <created>1733381854093</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1733381854093</updated>
+    </task>
+    <task id="LOCAL-00005" summary="First Version">
+      <option name="closed" value="true" />
+      <created>1733403262448</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1733403262448</updated>
+    </task>
+    <task id="LOCAL-00006" summary="First Version">
+      <option name="closed" value="true" />
+      <created>1733405940215</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1733405940215</updated>
+    </task>
+    <task id="LOCAL-00007" summary="First Version">
+      <option name="closed" value="true" />
+      <created>1733467184814</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1733467184814</updated>
+    </task>
+    <task id="LOCAL-00008" summary="First Version">
+      <option name="closed" value="true" />
+      <created>1733468200831</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1733468200831</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="e" />
+    <MESSAGE value="First Version" />
+    <option name="LAST_COMMIT_MESSAGE" value="First Version" />
+  </component>
+  <component name="com.gk646.codestats.settings.Save">
+    <option name="commitTimePoints">
+      <list>
+        <TimePoint>
+          <option name="timestamp" value="1733316541554" />
+          <option name="linesCode" value="2389" />
+          <option name="totalLines" value="2949" />
+          <option name="info" value="e" />
+        </TimePoint>
+        <TimePoint>
+          <option name="timestamp" value="1733316600968" />
+          <option name="linesCode" value="2389" />
+          <option name="totalLines" value="2949" />
+          <option name="info" value="e" />
+        </TimePoint>
+        <TimePoint>
+          <option name="timestamp" value="1733381854181" />
+          <option name="linesCode" value="1933" />
+          <option name="totalLines" value="2466" />
+          <option name="info" value="First Version" />
+        </TimePoint>
+        <TimePoint>
+          <option name="timestamp" value="1733403262587" />
+          <option name="linesCode" value="1972" />
+          <option name="totalLines" value="2505" />
+          <option name="info" value="First Version" />
+        </TimePoint>
+        <TimePoint>
+          <option name="timestamp" value="1733405940331" />
+          <option name="linesCode" value="1975" />
+          <option name="totalLines" value="2506" />
+          <option name="info" value="First Version" />
+        </TimePoint>
+        <TimePoint>
+          <option name="timestamp" value="1733467185028" />
+          <option name="linesCode" value="2082" />
+          <option name="totalLines" value="2641" />
+          <option name="info" value="First Version" />
+        </TimePoint>
+        <TimePoint>
+          <option name="timestamp" value="1733468200884" />
+          <option name="linesCode" value="2082" />
+          <option name="totalLines" value="2641" />
+          <option name="info" value="First Version" />
+        </TimePoint>
+      </list>
+    </option>
+    <option name="genericTimePoints">
+      <list>
+        <TimePoint>
+          <option name="timestamp" value="1733316600968" />
+          <option name="linesCode" value="2389" />
+          <option name="totalLines" value="2949" />
+          <option name="info" value="4 Dec 2024" />
+        </TimePoint>
+        <TimePoint>
+          <option name="timestamp" value="1733381854181" />
+          <option name="linesCode" value="1933" />
+          <option name="totalLines" value="2466" />
+          <option name="info" value="5 Dec 2024" />
+        </TimePoint>
+        <TimePoint>
+          <option name="timestamp" value="1733405940331" />
+          <option name="linesCode" value="1975" />
+          <option name="totalLines" value="2506" />
+          <option name="info" value="5 Dec 2024" />
+        </TimePoint>
+        <TimePoint>
+          <option name="timestamp" value="1733468200884" />
+          <option name="linesCode" value="2082" />
+          <option name="totalLines" value="2641" />
+          <option name="info" value="6 Dec 2024" />
+        </TimePoint>
+      </list>
+    </option>
+  </component>
+</project>
