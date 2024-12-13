@@ -1,5 +1,6 @@
 package DXFModify;
 
+import CADObjects.Polyline;
 import DXFRead.DXFDrawing;
 import java.util.ArrayList;
 
@@ -60,7 +61,7 @@ public void CreateDXFPolylineLine(Polyline polyline, ArrayList<String> DXFpolyli
         DXFpolyline.add("128");  // Flags
         DXFpolyline.add(" 43");
         DXFpolyline.add(String.valueOf(polyline.getWidth()));  // Width
-        for (int i = 0; i < cable.getCoords().size(); i++) {
+        for (int i = 0; i < polyline.getCoords().size(); i++) {
             DXFpolyline.add(" 10");
             DXFpolyline.add(String.valueOf(polyline.getCoords().getrawNCoordX(i)));
             DXFpolyline.add(" 20");

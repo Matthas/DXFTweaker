@@ -1,3 +1,5 @@
+package Main;
+
 import FileHandlers.Settings;
 import Windows.MainMenu;
 

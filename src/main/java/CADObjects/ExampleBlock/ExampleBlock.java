@@ -18,7 +18,7 @@ public class ExampleBlock {
     private double ScaleX;
     private double ScaleY;
     private String Attribute1;  //attribute of your block (visible in Properties window at bottom), duplicate for other attributes
-    //Hashmap used to store easy read, store & write attributes from DXF
+    //Hashmap used to easy read, store & write attributes from DXF
     private Map<String, BlockElement> BlockElements = new LinkedHashMap<>();
 
     public String getHandle() {return Handle;}

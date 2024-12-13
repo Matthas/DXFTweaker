@@ -1,7 +1,9 @@
 package DXFModify;
 
+import CADObjects.Polyline;
 import DXFRead.DXFDrawing;
 import java.util.ArrayList;
+import java.util.Map;
 
 //class to add new groups to the DXF file
 //its called by ADDGroups

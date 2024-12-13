@@ -10,7 +10,7 @@ import static DXFRead.DXFElements.Entities.Entities.EntitiesMap;
 import static DXFRead.DXFElements.Entities.Entities.Inserts;
 
 public class CADObjects {
-    protected static Map<String, ExampleBlock> DPs = new LinkedHashMap<>();
+    protected static Map<String, Polyline> ExampleCables;
 
     public void CADObjects(DXFDrawing DXF) {
         // example way to load your blocks into hashmaps
