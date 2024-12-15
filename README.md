@@ -1,4 +1,4 @@
-Please note it is my first java app so code is most likely to up to high standard.
+Please note it is my first java app so code is most likely not to up to high standard.
 
 Barebone base version for my application to Read & modify DXF Files that I made for my work.
 
