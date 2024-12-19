@@ -4,6 +4,8 @@ Barebone base version for my application to Read & modify DXF Files that I made 
 
 This is only base version as I cannot share full version due to confidential data.
 
-It is not catch-all solution, it was created based on 2D drawings.
+It is not catch-all solution, it was created based only on 2D drawings.
 
 I have included some example classes how you can use it to read or modify elements in your CAD files.
+
+Simple documentation included in main folder.
