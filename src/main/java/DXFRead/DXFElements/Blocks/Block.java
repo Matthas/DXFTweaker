@@ -18,14 +18,8 @@ public class Block {
     private String Thinkness;
     private Integer DXFIndex;
     Coords coords = new Coords();
-
-    public Integer getDXFIndex() {
-        return DXFIndex;
-    }
-    public void setDXFIndex(Integer DXFIndex) {
-        this.DXFIndex = DXFIndex;
-    }
     private Map<String, BlockElement> BlockElements = new LinkedHashMap<>();
+
     public Map<String, BlockElement> getBlockElements() {
         return BlockElements;
     }
@@ -34,6 +28,12 @@ public class Block {
     }
     public BlockElement getBlockElements(String handle) {
         return BlockElements.get(handle);
+    }
+    public Integer getDXFIndex() {
+        return DXFIndex;
+    }
+    public void setDXFIndex(Integer DXFIndex) {
+        this.DXFIndex = DXFIndex;
     }
     public Set<String> getKeySetBlockElements() {
         return BlockElements.keySet();

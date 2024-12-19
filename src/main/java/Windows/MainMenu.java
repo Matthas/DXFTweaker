@@ -13,7 +13,6 @@ public class MainMenu extends JFrame{
     private JPanel panel1;
     private JButton buttonDXFRead;
     private JTextPane textPane1;
-    private JTextPane textPane2;
 
     public MainMenu() {
         this.setTitle("DXFTool");
@@ -22,26 +21,22 @@ public class MainMenu extends JFrame{
         this.setSize(1000,650);
 
         this.setLayout(new BorderLayout());
-        ImageIcon image = new ImageIcon(getClass().getClassLoader().getResource("com/Matthas/Logo.png"));
+        ImageIcon image = new ImageIcon(getClass().getClassLoader().getResource("Icons/Logo.png"));
         this.setIconImage(image.getImage());
 
         buttonDXFRead = new JButton("DXF Load");
         buttonDXFRead.setPreferredSize(new Dimension(200,30));
         textPane1 = new JTextPane();
-        textPane2 = new JTextPane();
+        //textPane2 = new JTextPane();
         panel1 = new JPanel();
 
         panel1.setLayout(new BoxLayout(panel1, BoxLayout.Y_AXIS));
         textPane1.setEditable(false);
-        textPane2.setEditable(false);
-        textPane1.setPreferredSize(new Dimension(1000,400));
-        textPane2.setPreferredSize(new Dimension(1000, 200));
+        textPane1.setPreferredSize(new Dimension(1000,600));
 
         JScrollPane scrollPane1 = new JScrollPane(textPane1);
-        JScrollPane scrollPane2 = new JScrollPane(textPane2);
 
         panel1.add(scrollPane1);
-        panel1.add(scrollPane2);
 
         JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
         buttonPanel.add(buttonDXFRead);
@@ -80,8 +75,5 @@ public class MainMenu extends JFrame{
         SwingUtilities.invokeLater(() -> textPane1.setText(text));
     }
 
-    public void updateTextPane2(String text) {
-        SwingUtilities.invokeLater(() -> textPane2.setText(text));
-    }
 
 }

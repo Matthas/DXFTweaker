@@ -81,7 +81,7 @@ public class SettingsLoader {
         String fileName = "Settings/Settings.txt"; // Replace with the actual file name you want to check
         boolean fileExists = loader.doesFileExist("\\Matthas\\DXFReader\\"+fileName);
 
-        //to do' set it up so it will update with missing settings instead of only checking if setting exists
+
         if (!fileExists) {
             SettingsLoader.createFolder(loader.defaultPath + "\\Matthas");
             SettingsLoader.createFolder(loader.defaultPath + "\\Matthas\\DXFReader");

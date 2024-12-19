@@ -25,7 +25,7 @@ public class ReadEntity {
                             entity.setName(aryLines[i + 1]);
                         }
                         break;
-                    case "  3": //WHY it shares codes
+                    case "  3": //for MTEXt entity if string is longer than 250, code 3 is used to store excess charactes (multiple entires possible)
                         readEntityName(entity, aryLines, i);
                         break;
                     case "  5":
@@ -107,7 +107,7 @@ public class ReadEntity {
                         entity.setTransparency(Double.parseDouble(aryLines[i+1].trim()));
                         break;
                     case "1000":
-                        entity.addAtrribute(aryLines[i+1]);
+                        entity.addAttribute(aryLines[i+1]);
                         break;
                     case " 10": //coords
                         coords.addCoords(Double.parseDouble(aryLines[i + 1]), Double.parseDouble(aryLines[i + 3]));
@@ -159,23 +159,17 @@ public class ReadEntity {
     public void FindBlockName(Entities.Entity entity){
         Tables.BlockRecord BlockRef;
         Tables.BlockRecord BlockRef2;
-        //for (int f = 0; f < tables.size() ; f++) {
         for (String key : Tables.getBlockRecord().keySet()) {
             BlockRef = Tables.getBlockRecord().get(key);
-            //BlockRef = tables.BlockRecord.get(f);
             if (BlockRef.getName() == null) {
                 continue;
             }
+            if (BlockRef.getAlias() == null) {
+                continue;
+            }
             if (BlockRef.getName().equals(entity.getName())) {
-                for (String key2 : Tables.getBlockRecord().keySet()) {
-                    //for (int g = 0; g < tables.size() ; g++) {
-                    BlockRef2 = Tables.getBlockRecord().get(key2);
-
-                    if (BlockRef2.getHandle().equals(entity.getHandle())) {
-                        entity.setName(BlockRef2.getName());
-                        System.out.println(entity.getHandle() + entity.getName());
-                    }
-                }
+                String correctName = Tables.getBlockRecord().get(BlockRef.getAlias()).getName();
+                entity.setName(correctName);
             }
         }
     }

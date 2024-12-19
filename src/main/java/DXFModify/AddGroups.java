@@ -33,7 +33,7 @@ public class AddGroups {
         }
     }
 
-     public void CreateDXFPolylineGroup(Polyline polyline, ArrayList<String> DXFGroups) {
+     public void CreateDXFGroup(Polyline polyline, ArrayList<String> DXFGroups) {
         String handle = DXFDrawing.getNextSeed();
         DXFGroups.add("  0");
         DXFGroups.add("GROUP");

@@ -4,34 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4eba9fed-f782-406f-86c7-0a788d7c1ca5" name="Changes" comment="First Version">
-      <change afterPath="$PROJECT_DIR$/src/main/java/CADObjects/Polyline.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Matthas/CADObjects/CADObjects.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CADObjects/CADObjects.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Matthas/CADObjects/ExampleBlock/ExampleBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CADObjects/ExampleBlock/ExampleBlock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Matthas/DXFModify/ADDPolyline.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DXFModify/ADDPolyline.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Matthas/DXFModify/AddGroups.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DXFModify/AddGroups.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Matthas/DXFModify/ChangeAttributes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DXFModify/ChangeAttributes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Matthas/DXFModify/ModifyHandSeed.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DXFModify/ModifyHandSeed.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Matthas/DXFRead/DXFDrawing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DXFRead/DXFDrawing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Matthas/DXFRead/DXFElements/Blocks/Block.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DXFRead/DXFElements/Blocks/Block.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Matthas/DXFRead/DXFElements/Blocks/BlockElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DXFRead/DXFElements/Blocks/BlockElement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Matthas/DXFRead/DXFElements/Blocks/Blocks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DXFRead/DXFElements/Blocks/Blocks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Matthas/DXFRead/DXFElements/Coords/Coords.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DXFRead/DXFElements/Coords/Coords.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Matthas/DXFRead/DXFElements/Entities/Entities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DXFRead/DXFElements/Entities/Entities.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Matthas/DXFRead/DXFElements/Entities/ReadEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DXFRead/DXFElements/Entities/ReadEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Matthas/DXFRead/DXFElements/Objects/Objects.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DXFRead/DXFElements/Objects/Objects.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Matthas/DXFRead/DXFElements/Tables/Tables.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DXFRead/DXFElements/Tables/Tables.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Matthas/DXFRead/DXFElements/Vertexes/Vertexes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DXFRead/DXFElements/Vertexes/Vertexes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Matthas/DXFRead/DXFRead.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DXFRead/DXFRead.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Matthas/FileHandlers/DXFFileSaver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FileHandlers/DXFFileSaver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Matthas/FileHandlers/DXFLoad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FileHandlers/DXFLoad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Matthas/FileHandlers/FileChooser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FileHandlers/FileChooser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Matthas/FileHandlers/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FileHandlers/Settings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Matthas/FileHandlers/SettingsLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FileHandlers/SettingsLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Matthas/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Matthas/Misc/MessageConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Misc/MessageConsole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Matthas/Windows/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Windows/MainMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Matthas/com/Matthas/Logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Matthas/Logo.png" afterDir="false" />
+    <list default="true" id="4eba9fed-f782-406f-86c7-0a788d7c1ca5" name="Changes" comment="Amendments">
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/Settings/Settings.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Settings/Settings.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CADObjects/CADObjects.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CADObjects/CADObjects.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CADObjects/ExampleBlock/ExampleBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CADObjects/ExampleBlock/ExampleBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DXFModify/AddGroups.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DXFModify/AddGroups.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DXFModify/ModifyHandSeed.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DXFModify/ModifyHandSeed.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DXFRead/DXFDrawing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DXFRead/DXFDrawing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DXFRead/DXFElements/Blocks/Block.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DXFRead/DXFElements/Blocks/Block.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DXFRead/DXFElements/Coords/Coords.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DXFRead/DXFElements/Coords/Coords.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DXFRead/DXFElements/Entities/Entities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DXFRead/DXFElements/Entities/Entities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DXFRead/DXFElements/Entities/ReadEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DXFRead/DXFElements/Entities/ReadEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DXFRead/DXFElements/Objects/Objects.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DXFRead/DXFElements/Objects/Objects.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DXFRead/DXFElements/Vertexes/Vertexes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DXFRead/DXFElements/Vertexes/Vertexes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DXFRead/DXFRead.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DXFRead/DXFRead.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FileHandlers/FileChooser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FileHandlers/FileChooser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FileHandlers/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FileHandlers/Settings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FileHandlers/SettingsLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FileHandlers/SettingsLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Matthas/Logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Icons/Logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Windows/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Windows/MainMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,32 +61,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main (1).executor": "Run",
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "kotlin-language-version-configured": "true",
-    "last_directory_selection": "C:/JavaProjects/DXFToolbox/src/main/java",
-    "last_opened_file_path": "C:/JavaProjects/DXFToolbox",
-    "onboarding.tips.debug.path": "C:/JavaProjects/DXFToolbox/src/main/java/com/Matthas/Main.java",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "project.propVCSSupport.CommitDialog"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main (1).executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.Main.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/JavaProjects/DXFToolbox/src/main/java&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/JavaProjects/DXFToolbox&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/JavaProjects/DXFToolbox/src/main/java/com/Matthas/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.CommitDialog&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\JavaProjects\DXFTweaker\src\main\resources\Icons" />
+      <recent name="C:\JavaProjects\DXFTweaker\src\main\resources" />
+      <recent name="C:\JavaProjects\DXFTweaker\src\main" />
       <recent name="C:\JavaProjects\DXFToolbox" />
       <recent name="C:\JavaProjects\DXFToolbox\src\main\java" />
-      <recent name="C:\JavaProjects\DXFToolbox\src" />
-      <recent name="C:\JavaProjects\DXFToolbox\src\main\resources\Resources" />
-      <recent name="C:\JavaProjects\DXFToolbox\src\main\resources" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="Icons" />
+      <recent name="" />
       <recent name="com.Matthas" />
     </key>
   </component>
@@ -198,7 +194,23 @@
       <option name="project" value="LOCAL" />
       <updated>1733468200831</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Amendments">
+      <option name="closed" value="true" />
+      <created>1734087032427</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1734087032427</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Amendments">
+      <option name="closed" value="true" />
+      <created>1734087045457</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1734087045457</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -215,7 +227,24 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="e" />
     <MESSAGE value="First Version" />
-    <option name="LAST_COMMIT_MESSAGE" value="First Version" />
+    <MESSAGE value="Amendments" />
+    <option name="LAST_COMMIT_MESSAGE" value="Amendments" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DXFRead/DXFRead.java</url>
+          <line>75</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="((HashMap.Node)((HashMap)objects.Objects).entrySet().toArray()[0]).getValue()" custom="java.util.HashMap.Node,java.util.HashMap" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="com.gk646.codestats.settings.Save">
     <option name="commitTimePoints">
@@ -262,6 +291,18 @@
           <option name="totalLines" value="2641" />
           <option name="info" value="First Version" />
         </TimePoint>
+        <TimePoint>
+          <option name="timestamp" value="1734087032450" />
+          <option name="linesCode" value="2226" />
+          <option name="totalLines" value="2827" />
+          <option name="info" value="Amendments" />
+        </TimePoint>
+        <TimePoint>
+          <option name="timestamp" value="1734087045502" />
+          <option name="linesCode" value="2226" />
+          <option name="totalLines" value="2827" />
+          <option name="info" value="Amendments" />
+        </TimePoint>
       </list>
     </option>
     <option name="genericTimePoints">
@@ -285,10 +326,10 @@
           <option name="info" value="5 Dec 2024" />
         </TimePoint>
         <TimePoint>
-          <option name="timestamp" value="1733468200884" />
-          <option name="linesCode" value="2082" />
-          <option name="totalLines" value="2641" />
-          <option name="info" value="6 Dec 2024" />
+          <option name="timestamp" value="1734087045502" />
+          <option name="linesCode" value="2226" />
+          <option name="totalLines" value="2827" />
+          <option name="info" value="13 Dec 2024" />
         </TimePoint>
       </list>
     </option>

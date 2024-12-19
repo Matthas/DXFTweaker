@@ -7,7 +7,7 @@ import DXFRead.DXFDrawing;
 
 public class ModifyHandSeed {
     static String[] ModifyHandSeed(String[] arylines, DXFDrawing CAD) {
-        int HandseedIndex = CAD.getHandSeedIndex() + 2;
+        int HandseedIndex = CAD.getHandSeedIndex() + 1;
         arylines[HandseedIndex] = CAD.getNextSeed();
         //add code to modify handseed
         return arylines;

@@ -46,9 +46,6 @@ public class Settings {
     private static void LoadDefaultSettings() {
         try (InputStream in = Settings.class.getResourceAsStream(defaultSettingsPath);
              BufferedReader reader = new BufferedReader(new InputStreamReader(in))) {
-//            if (in == null) {
-//                throw new FileNotFoundException("Settings file not found in JAR: " + defaultSettingsPath);
-//            }
             String line;
             while ((line = reader.readLine()) != null) {
                 //System.out.println("Reading line from JAR file: " + line);
@@ -66,12 +63,12 @@ public class Settings {
 
     private static void LoadOrCreateUserSettings() {
         File localFile = new File(settingsPath);
-        if (localFile.exists()) {
+        if (localFile.exists()) { //check if user settings file exists
+            //populate settingsMap with based on user Settings file
             try (InputStream in = new FileInputStream(localFile);
                  BufferedReader reader = new BufferedReader(new InputStreamReader(in))) {
                 String line;
                 while ((line = reader.readLine()) != null) {
-                    //System.out.println("Reading line from local file: " + line);
                     String[] parts = line.split("=", 2);
                     if (parts.length == 2) {
                         settingsMap.put(parts[0].trim(), parts[1].trim());
@@ -105,7 +102,6 @@ public class Settings {
                 System.out.println("Comparing: " + defalt + " with " + current );
                 if (defalt.equals(current)) {
                     found = true;
-
                     if (settingsMap.get(current) == null || settingsMap.get(current).isEmpty()) {
                         settingsMap.put(current,defaultSettingsMap.get(defalt));
                         System.out.println("Naprawiono ustawienia - " + defalt);

@@ -5,6 +5,7 @@ import FileHandlers.DXFLoad;
 
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 
@@ -13,7 +14,7 @@ public class Objects {
     private String groupHandle;
     private Entities.Entity entity;
 
-    static Map<String, Object> Objects = new HashMap<>();
+    static Map<String, Object> Objects = new LinkedHashMap<>();
     private static int endSecIndex;
 
     public Objects(Integer currentline, Integer length, DXFLoad file) throws IOException {
@@ -24,32 +25,30 @@ public class Objects {
                 case "GROUP":
                 case "FIELD":
                 case "DICTIONARY":
-                    Object object = new Object();
-                    object.setDXFIndex(i);
-                    if (aryLines[i] != "GROUP") {
-                        object.setObjectType(aryLines[i]);
-                    }else {
-                        object.setObjectType("");
-                    }
+                    DXFObject dxfObject = new DXFObject();
+                    dxfObject.setDXFIndex(i);
+                    dxfObject.setObjectType(aryLines[i]);
+
                     innerloop: for (; i < length; i++) {
                         switch (aryLines[i]) {
                             case "  5":
-                                object.setHandle(aryLines[i+1]);
-                                object.setLineIndex(i);
+                                dxfObject.setHandle(aryLines[i+1]);
+                                dxfObject.setLineIndex(i);
                                 break;
                             case "  1":
                             case "  2":
                             case "  3":
-                                object.ObjectValues.put(aryLines[i+1],aryLines[i+1]);
+                                dxfObject.ObjectValues.put(aryLines[i+1],aryLines[i+3]);
+                                break;
+                            case "340":
+                                dxfObject.GroupObjects.put(aryLines[i+1],aryLines[i+1]);
                                 break;
                             case "  0":
                                 break innerloop;
-                            default:
-                                object.ObjectData.put(aryLines[i], aryLines[i+1]);
-                                break;
                         }
                     }
-                    Objects.put(object.getHandle(), object);
+                    Objects.put(dxfObject.getHandle(), dxfObject);
+                    break;
                 case "ENDSEC": //end of Object section
                     endSecIndex = i;
                     break loop;
@@ -58,12 +57,12 @@ public class Objects {
     }
     public static int getEndSecIndex() { return endSecIndex;}
 
-    public static class Object {
+    public static class DXFObject {
         private String handle;
         private String ObjectType;
         private Integer LineIndex;
         private Integer DXFIndex;
-        Map<String, String> ObjectData = new HashMap<>();
+        Map<String, String> GroupObjects = new HashMap<>();
         Map<String, String> ObjectValues = new HashMap<>();
 
         public Integer getDXFIndex() {

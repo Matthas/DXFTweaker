@@ -247,7 +247,7 @@ public class DXFDrawing {
         }
     }
 
-    public static void SetPolylinesVertexesGetVertexes(Entities.Entity entity, DXFDrawing DXF) {
+    private static void SetPolylinesVertexesGetVertexes(Entities.Entity entity, DXFDrawing DXF) {
         for (String vertexes : DXF.Entities.getEntities().keySet()) {
             Entities.Entity vertex = DXF.Entities.getEntities().get(vertexes);
             if (vertex.getBlockname().equals("VERTEX")) {
@@ -258,7 +258,7 @@ public class DXFDrawing {
         }
     }
 
-    public static void SetPolylinesVertexesRemoveEmptyFirstCoords(Entities.Entity entity) {
+    private static void SetPolylinesVertexesRemoveEmptyFirstCoords(Entities.Entity entity) {
         if (entity.getCoords().getNCoordX(0) == 0.0 && entity.getCoords().getNCoordY(0) == 0.0) {
             entity.getCoords().removeCoords(0);
         }

@@ -125,7 +125,7 @@ public class Coords {
         return "Vertexes: " + tempstring + "are duplicates";
     }
 
-    public void RemoveDeplicates() {
+    public void RemoveDuplicates() {
         if (mCoords.size() <= 1) {
             return;
         }

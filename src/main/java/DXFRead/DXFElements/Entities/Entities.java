@@ -337,7 +337,7 @@ public class Entities {
         public void setLineIndex(Integer lineIndex) {LineIndex = lineIndex;}
         public void setAttributes(Map<String, String> attributes) {Attributes = attributes;}
         //we split string to attribute with = being delimiter.
-        public void addAtrribute(String attribute) {
+        public void addAttribute(String attribute) {
             int equalloc = attribute.indexOf('=');
             if (equalloc > 0 ) {
                 String name = attribute.substring(0, equalloc);

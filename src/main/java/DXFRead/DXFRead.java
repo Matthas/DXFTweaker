@@ -20,6 +20,10 @@ public class DXFRead  {
        this.mainMenu = mainMenu;
         //Function to promp user to select file
         String file_name = FileChooser.selectFilePath();
+        if (file_name == null) {
+            System.out.println("No file selected");
+            return;
+        }
 
         DXFDrawing cadDrawing = new DXFDrawing();
 
