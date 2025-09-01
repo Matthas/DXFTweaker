@@ -8,4 +8,4 @@ It is not catch-all solution, it was created based only on 2D drawings.
 
 I have included some example classes how you can use it to read or modify elements in your CAD files.
 
-Simple documentation included in com.Matthas.main folder.
+Simple documentation included.
