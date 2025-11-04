@@ -4,44 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4eba9fed-f782-406f-86c7-0a788d7c1ca5" name="Changes" comment="Refractoring names">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/dxfRead/dxfElements/objects/DXFObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/dxfRead/dxfElements/objects/DXFObjects.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/ss.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/tools/dxfCreators/DXFGroupCreator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/tools/dxfCreators/DXFPolylineCreator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/tools/dxfCreators/dxfPolyline/CableCreator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/tools/other.java" afterDir="false" />
+    <list default="true" id="4eba9fed-f782-406f-86c7-0a788d7c1ca5" name="Changes" comment="Merge remote-tracking branch 'origin/main'">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cadObjects/CADObjectsReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/cadObjects/CADObjects.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cadObjects/Polyline.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/cadObjects/Polyline.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cadObjects/exampleBlock/ExampleBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/cadObjects/exampleBlock/ExampleBlock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dxfModify/ADDPolyline.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/dxfModify/ADDPolyline.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dxfModify/AddGroups.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/dxfModify/AddGroups.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dxfModify/ChangeAttributes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/dxfModify/ChangeAttributes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dxfModify/ModifyHandSeed.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/dxfModify/ModifyHandSeed.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dxfRead/DXFDrawing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/dxfRead/DXFDrawing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dxfRead/DXFReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/dxfRead/DXFReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dxfRead/dxfElements/blocks/Block.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/dxfRead/dxfElements/blocks/Block.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dxfRead/dxfElements/blocks/BlockElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/dxfRead/dxfElements/blocks/BlockElement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dxfRead/dxfElements/blocks/Blocks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/dxfRead/dxfElements/blocks/Blocks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dxfRead/dxfElements/coords/Coords.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/dxfRead/dxfElements/coords/Coords.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dxfRead/dxfElements/entities/Entities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/dxfRead/dxfElements/entities/Entities.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dxfRead/dxfElements/entities/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/dxfRead/dxfElements/entities/Entity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dxfRead/dxfElements/entities/ReadEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/dxfRead/dxfElements/entities/ReadEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dxfRead/dxfElements/objects/Objects.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dxfRead/dxfElements/tables/Tables.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/dxfRead/dxfElements/tables/Tables.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dxfRead/dxfElements/vertexes/Vertexes.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fileHandlers/DXFFileSaver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/fileHandlers/DXFFileSaver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fileHandlers/DXFLoad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/fileHandlers/DXFLoad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fileHandlers/FileChooser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/fileHandlers/FileChooser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fileHandlers/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/fileHandlers/Settings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fileHandlers/SettingsLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/fileHandlers/SettingsLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/misc/MessageConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/misc/MessageConsole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/windows/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/windows/MainMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Matthas/cadObjects/CADObjects.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/cadObjects/CADObjects.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Matthas/cadObjects/exampleBlock/ExampleBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/cadObjects/CadBlocks/CADBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Matthas/dxfRead/DXFReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/dxfRead/DXFReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Matthas/dxfRead/dxfElements/entities/ReadEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/dxfRead/dxfElements/entities/ReadEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Matthas/ss.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Matthas/windows/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/windows/MainMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,6 +53,7 @@
     &quot;Application.Main (1).executor&quot;: &quot;Run&quot;,
     &quot;Application.Main.Main.executor&quot;: &quot;Debug&quot;,
     &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.com.Matthas.main.Main.executor&quot;: &quot;Debug&quot;,
     &quot;Application.main.Main.executor&quot;: &quot;Run&quot;,
     &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
     &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
@@ -264,7 +235,23 @@
       <option name="project" value="LOCAL" />
       <updated>1736239417096</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Renaming fixes + adding example of DXFGroup and DXFDctionary">
+      <option name="closed" value="true" />
+      <created>1739964423090</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1739964423090</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Merge remote-tracking branch 'origin/main'">
+      <option name="closed" value="true" />
+      <created>1739964441445</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1739964441445</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -284,9 +271,20 @@
     <MESSAGE value="Amendments" />
     <MESSAGE value="Amendments + documentation" />
     <MESSAGE value="Refractoring names" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refractoring names" />
+    <MESSAGE value="Renaming fixes + adding example of DXFGroup and DXFDctionary" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/main'" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/main'" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/Matthas/dxfRead/dxfElements/blocks/Blocks.java</url>
+          <line>176</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="((HashMap.Node)((HashMap)objects.Objects).entrySet().toArray()[0]).getValue()" custom="java.util.HashMap.Node,java.util.HashMap" />
@@ -374,6 +372,18 @@
           <option name="totalLines" value="2871" />
           <option name="info" value="Refractoring names" />
         </TimePoint>
+        <TimePoint>
+          <option name="timestamp" value="1739964423299" />
+          <option name="linesCode" value="2000" />
+          <option name="totalLines" value="5922" />
+          <option name="info" value="Renaming fixes + adding example of DXFGroup and DX" />
+        </TimePoint>
+        <TimePoint>
+          <option name="timestamp" value="1739964441500" />
+          <option name="linesCode" value="2000" />
+          <option name="totalLines" value="5920" />
+          <option name="info" value="Merge remote-tracking branch 'origin/main'" />
+        </TimePoint>
       </list>
     </option>
     <option name="genericTimePoints">
@@ -401,6 +411,12 @@
           <option name="linesCode" value="2253" />
           <option name="totalLines" value="2871" />
           <option name="info" value="7 Jan 2025" />
+        </TimePoint>
+        <TimePoint>
+          <option name="timestamp" value="1739964482890" />
+          <option name="linesCode" value="2000" />
+          <option name="totalLines" value="5920" />
+          <option name="info" value="19 Feb 2025" />
         </TimePoint>
       </list>
     </option>

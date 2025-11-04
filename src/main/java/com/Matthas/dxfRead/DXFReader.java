@@ -95,7 +95,11 @@ public class DXFReader {
                         break;
                 }
             }//EOL for reading DXF file
-
+            //now we need to recreate CADBlocks in our code
+            System.out.println("Recreating CADBlocks from DXF");
+            cad = new CADObjects();
+            cad.CADObjects(dxfDrawing);
+            System.out.println("CADBlocks Recreated Successfully");
         }
         catch (IOException e) {
             System.out.println(e.getMessage());

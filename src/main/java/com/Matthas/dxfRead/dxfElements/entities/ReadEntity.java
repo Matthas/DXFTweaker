@@ -20,6 +20,7 @@ public class ReadEntity {
                     case "  2":
                         //check if block is dynamic and find real block name using function FindBlockName
                         if (left(aryLines[i + 1], 2).equals("*U")) {
+                            entity.setName(aryLines[i + 1]);
                             FindBlockName(entity);
                         } else {
                             entity.setName(aryLines[i + 1]);
@@ -52,7 +53,7 @@ public class ReadEntity {
                         }
                         break;
                     case " 41":
-                        if  (!entity.getBlockname().equals("ATTRIB") && !entity.getBlockname().matches(".*LINE")) {
+                        if  (entity.getBlockname().equals("INSERT")) {
                             entity.setScaleX(Double.parseDouble(aryLines[i + 1].trim()));
                             entity.setScaleY(Double.parseDouble(aryLines[i + 3].trim()));
                         }
