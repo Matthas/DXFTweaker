@@ -22,6 +22,8 @@ public class Entity {
     private String Name3;
     private Double Thickness;
     private Double Width;
+    private Double Radius;
+    private Double Dimension;
     private Double Transparency;
     private Double LineTypeScale;
     private String Justify;
@@ -33,16 +35,41 @@ public class Entity {
     private String TextStyle;
     private Integer PolylineFlag;
     private String EntityType;
+    private Double PatternScale;
+    private Double ArrowSize;
+    private Double ViewHeight;
+    private Double CellHeight;
+    private Double EndWidth;
+    private Double StartAngle;
+    private Double Degree;
+    private Double EndAngle;
+    private Double StartParameter;
+    private Double EndParameter;
+    private Double ExtensionLength;
+    private Double Bulge;
+    private Double AxisRatio; //Ratio of minor axis to major axis
     Coords coords = new Coords();
+    Coords FitPoints = new Coords();
     private String ErrorString;
     private Double ScaleX;
     private Double ScaleY;
     private Integer LineIndex;
     private Integer BackgroundColor;
     private Integer DXFIndex;
+    private Map<Integer, Double> FitParameters = new LinkedHashMap<>();
+    private Map<Integer, Double> Knots = new LinkedHashMap<>();
     Map<String, String> ATTribs = new HashMap<>();
     Map<String, Entity> ATTribEnt = new HashMap<>();
-    Map<String, String> Attributes = new LinkedHashMap<>();
+    private Map<String, String> Attributes = new LinkedHashMap<>();
+    private Map<String, Map<String, String>> ExtendedData = new LinkedHashMap<>();
+
+    public void addFitParameter(Double fitParaVal){
+        FitParameters.put(FitParameters.size(), fitParaVal);
+    }
+
+    public void addKnot(Double knotVal){
+        Knots.put(Knots.size(),knotVal);
+    }
 
     //we split string to attribute with = being delimiter.
     public void addAttribute(String attribute) {

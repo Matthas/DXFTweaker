@@ -25,7 +25,7 @@ public class DXFDrawing {
     private static Entities Entities;
     private static String HandSeed;
     private static DXFObjects DXFObjects;
-    public static CADObjects CADObjects;
+    //public static CADObjects CADObjects;
     public static Blocks Blocks;
     private static Integer HeaderStartIndex;
     private static Integer HeaderEndIndex;
@@ -42,120 +42,44 @@ public class DXFDrawing {
     private static Integer HandSeedIndex;
     private Coords coords = new Coords();
 
-    public static String getHandSeed() {
-        return HandSeed;
-    }
-    public static void setHandSeed(String handSeed) {
-        HandSeed = handSeed;
-    }
-    public static Blocks getBlocks() {
-        return Blocks;
-    }
-    public static void setBlocks(Blocks blocks) {
-        Blocks = blocks;
-    }
-    public static CADObjects getCADObjects() {
-        return CADObjects;
-    }
-    public static void setCADBlocks(CADObjects cadObjects) {
-        CADObjects = cadObjects;
-    }
-    public static DXFObjects getDXFObjects() {
-        return DXFObjects;
-    }
-    public static void setDXFObjects(DXFObjects objects) {
-        DXFObjects = objects;
-    }
-    public static Entities getEntities() {
-        return Entities;
-    }
-    public static void setEntities(Entities entities) {
-        Entities = entities;
-    }
-    public static Tables getTables() {
-        return Tables;
-    }
-    public static void setTables(Tables tables) {
-        Tables = tables;
-    }
-    public static Integer getHeaderStartIndex() {
-        return HeaderStartIndex;
-    }
-    public static void setHeaderStartIndex(Integer headerStartIndex) {
-        HeaderStartIndex = headerStartIndex;
-    }
-    public static Integer getObjectsEndIndex() {
-        return ObjectsEndIndex;
-    }
-    public static void setObjectsEndIndex(Integer objectsEndIndex) {
-        ObjectsEndIndex = objectsEndIndex;
-    }
-    public static Integer getObjectsStartIndex() {
-        return ObjectsStartIndex;
-    }
-    public static void setObjectsStartIndex(Integer objectsStartIndex) {
-        ObjectsStartIndex = objectsStartIndex;
-    }
-    public static Integer getEntitiesEndIndex() {
-        return EntitiesEndIndex;
-    }
-    public static void setEntitiesEndIndex(Integer entitiesEndIndex) {
-        EntitiesEndIndex = entitiesEndIndex;
-    }
-    public static Integer getEntitiesStartIndex() {
-        return EntitiesStartIndex;
-    }
-    public static void setEntitiesStartIndex(Integer entitiesStartIndex) {
-        EntitiesStartIndex = entitiesStartIndex;
-    }
-    public static Integer getBlocksEndIndex() {
-        return BlocksEndIndex;
-    }
-    public static void setBlocksEndIndex(Integer blocksEndIndex) {
-        BlocksEndIndex = blocksEndIndex;
-    }
-    public static Integer getTablesEndIndex() {
-        return TablesEndIndex;
-    }
-    public static void setTablesEndIndex(Integer tablesEndIndex) {
-        TablesEndIndex = tablesEndIndex;
-    }
-    public static Integer getBlocksStartIndex() {
-        return BlocksStartIndex;
-    }
-    public static void setBlocksStartIndex(Integer blocksStartIndex) {
-        BlocksStartIndex = blocksStartIndex;
-    }
-    public static Integer getTablesStartIndex() {
-        return TablesStartIndex;
-    }
-    public static void setTablesStartIndex(Integer tablesStartIndex) {
-        TablesStartIndex = tablesStartIndex;
-    }
-    public static Integer getClassesEndIndex() {
-        return ClassesEndIndex;
-    }
-    public static void setClassesEndIndex(Integer classesEndIndex) {
-        ClassesEndIndex = classesEndIndex;
-    }
-    public static Integer getClassesStartIndex() {
-        return ClassesStartIndex;
-    }
-    public static void setClassesStartIndex(Integer classesStartIndex) {
-        ClassesStartIndex = classesStartIndex;
-    }
-    public static Integer getHeaderEndIndex() {
-        return HeaderEndIndex;
-    }
-    public static void setHeaderEndIndex(Integer headerEndIndex) {
-        HeaderEndIndex = headerEndIndex;
-    }
-    public static Integer getHandSeedIndex() {
-        return HandSeedIndex;
-    }
-    public static void setHandSeedIndex(Integer handSeedIndex) {
-        HandSeedIndex = handSeedIndex;
-    }
+    public static String getHandSeed() {return HandSeed;}
+    public static void setHandSeed(String handSeed) {HandSeed = handSeed;}
+    public static Blocks getBlocks() {return Blocks;}
+    public static void setBlocks(Blocks blocks) {Blocks = blocks;}
+    //public static CADObjects getCADObjects() {return CADObjects;}
+    //public static void setCADBlocks(CADObjects cadObjects) {CADObjects = cadObjects;}
+    public static DXFObjects getDXFObjects() {return DXFObjects;}
+    public static void setDXFObjects(DXFObjects objects) {DXFObjects = objects;}
+    public static Entities getEntities() {return Entities;}
+    public static void setEntities(Entities entities) {Entities = entities;}
+    public static Tables getTables() {return Tables;}
+    public static void setTables(Tables tables) {Tables = tables;}
+    public static Integer getHeaderStartIndex() {return HeaderStartIndex;}
+    public static void setHeaderStartIndex(Integer headerStartIndex) {HeaderStartIndex = headerStartIndex;}
+    public static Integer getObjectsEndIndex() {return ObjectsEndIndex;}
+    public static void setObjectsEndIndex(Integer objectsEndIndex) {ObjectsEndIndex = objectsEndIndex;}
+    public static Integer getObjectsStartIndex() {return ObjectsStartIndex;}
+    public static void setObjectsStartIndex(Integer objectsStartIndex) {ObjectsStartIndex = objectsStartIndex;}
+    public static Integer getEntitiesEndIndex() {return EntitiesEndIndex;}
+    public static void setEntitiesEndIndex(Integer entitiesEndIndex) {EntitiesEndIndex = entitiesEndIndex;}
+    public static Integer getEntitiesStartIndex() {return EntitiesStartIndex;}
+    public static void setEntitiesStartIndex(Integer entitiesStartIndex) {EntitiesStartIndex = entitiesStartIndex;}
+    public static Integer getBlocksEndIndex() {return BlocksEndIndex;}
+    public static void setBlocksEndIndex(Integer blocksEndIndex) {BlocksEndIndex = blocksEndIndex;}
+    public static Integer getTablesEndIndex() {return TablesEndIndex;}
+    public static void setTablesEndIndex(Integer tablesEndIndex) {TablesEndIndex = tablesEndIndex;}
+    public static Integer getBlocksStartIndex() {return BlocksStartIndex;}
+    public static void setBlocksStartIndex(Integer blocksStartIndex) {BlocksStartIndex = blocksStartIndex;}
+    public static Integer getTablesStartIndex() {return TablesStartIndex;}
+    public static void setTablesStartIndex(Integer tablesStartIndex) {TablesStartIndex = tablesStartIndex;}
+    public static Integer getClassesEndIndex() {return ClassesEndIndex;}
+    public static void setClassesEndIndex(Integer classesEndIndex) {ClassesEndIndex = classesEndIndex;}
+    public static Integer getClassesStartIndex() {return ClassesStartIndex;}
+    public static void setClassesStartIndex(Integer classesStartIndex) {ClassesStartIndex = classesStartIndex;}
+    public static Integer getHeaderEndIndex() {return HeaderEndIndex;}
+    public static void setHeaderEndIndex(Integer headerEndIndex) {HeaderEndIndex = headerEndIndex;}
+    public static Integer getHandSeedIndex() {return HandSeedIndex;}
+    public static void setHandSeedIndex(Integer handSeedIndex) {HandSeedIndex = handSeedIndex;}
 
     public DXFDrawing() {
     }
@@ -242,8 +166,8 @@ public class DXFDrawing {
     }
 
     public static void SetPolylinesVertexes(DXFDrawing DXF) {
-        for (String polyline : DXF.Entities.getEntities().keySet()) {
-            Entity entity = DXF.Entities.getEntities().get(polyline);
+        for (String polyline : DXF.Entities.getEntitiesMap().keySet()) {
+            Entity entity = DXF.Entities.getEntitiesMap().get(polyline);
             if (entity.getBlockname().equals("POLYLINE")) {
                 //SetPolylinesVertexesRemoveEmptyFirstCoords(entity);
                 SetPolylinesVertexesGetVertexes(entity, DXF);
@@ -254,8 +178,8 @@ public class DXFDrawing {
     }
 
     private static void SetPolylinesVertexesGetVertexes(Entity entity, DXFDrawing DXF) {
-        for (String vertexes : DXF.Entities.getEntities().keySet()) {
-            Entity vertex = DXF.Entities.getEntities().get(vertexes);
+        for (String vertexes : DXF.Entities.getEntitiesMap().keySet()) {
+            Entity vertex = DXF.Entities.getEntitiesMap().get(vertexes);
             if (vertex.getBlockname().equals("VERTEX")) {
                 if (vertex.getParentHandle().equals(entity.getHandle())) {
                     entity.getCoords().addCoords(vertex.getCoords().getrawNCoordX(0), vertex.getCoords().getrawNCoordY(0));

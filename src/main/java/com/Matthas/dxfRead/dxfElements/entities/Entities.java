@@ -13,7 +13,7 @@ public class Entities {
     public static Map<String, Entity> Inserts = new LinkedHashMap<>();
     //Map<String, Entity> Vertexes = new HashMap<>();
     private static int endSecIndex;
-    public Map<String, Entity> getEntities() {
+    public static Map<String, Entity> getEntitiesMap() {
         return EntitiesMap;
     }
     public Map<String, Entity> getInserts() {
@@ -95,6 +95,10 @@ public class Entities {
                     insert.setBlockname("INSERT");
                     insert.setDXFIndex(i);
                     readEntity.readEntity(i,length, aryLines, insert, this);
+                    if (insert.getColour() == null ){
+                        insert.setColour(256); //if there is no color it means its ByLayer
+                        //ByBlock(0) is not valid for inserts, its only valid for elemnts that make up Blocks
+                    }
                     Inserts.put(insert.getHandle(), insert);
                     break; //INSERT
                 case "ATTRIB":

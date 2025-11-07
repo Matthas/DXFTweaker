@@ -1,4 +1,4 @@
-package com.Matthas.cadObjects.CadBlocks;
+package com.Matthas.cadObjects.CadElements;
 
 import com.Matthas.dxfRead.DXFDrawing;
 import com.Matthas.dxfRead.dxfElements.blocks.Block;
@@ -23,9 +23,9 @@ import static com.Matthas.dxfRead.dxfElements.entities.Entities.EntitiesMap;
 @Setter
 public class CADBlock {
     private String Handle;
-    private String Ref; //this would be unique name of your block (as in attribute of block)
+    private String Name;
     private String BlockName;  //this would be your block name
-    private Integer Colour;  //color as int, DXF has unusual format of saving color as index or as RGB converted to DEX (not HEX)
+    private Integer Color;  //color as int, DXF has unusual format of saving color as index or as RGB converted to DEX (not HEX)
     private Coords coords;
     private String Layer;
     private double ScaleX;
@@ -40,18 +40,19 @@ public class CADBlock {
     }
 
     //this is function to populate all attributes of your block.
-    public void BlockAttribs(CADBlock cadBlock, Entity attObject) {
+    public void blockAttribs(CADBlock cadBlock, Entity attObject) {
         if (attObject.getBlockname().equals("ATTRIB")) {
             cadBlock.addAttribute(attObject.getName(),attObject.getTextVal());
         }
     }
 
-    public static void CreateCADBlock(Entity insert, CADBlock cadBlock, DXFDrawing DXF) {
+    public static void createCADBlock(Entity insert, CADBlock cadBlock, DXFDrawing DXF) {
         String handle = insert.getHandle();
+        cadBlock.setName("Block"); //change to your liking
         cadBlock.setHandle(insert.getHandle());
         cadBlock.setCoords(insert.getCoords());
         cadBlock.setLayer(insert.getLayer());
-        cadBlock.setColour(insert.getColour());
+        cadBlock.setColor(insert.getColour());
 
         if (insert.getScaleX() == null ) {
             cadBlock.setScaleX(1);
@@ -66,23 +67,23 @@ public class CADBlock {
         //Hashmap to store elements we used, so we can delete later and save loop iteration for next blocks
         Map<String, String> todelete = new HashMap<>();
 
-        GetAttributes(cadBlock,handle,DXF, todelete);
+        getAttributes(cadBlock,handle,DXF, todelete);
 
-        FindBlock(cadBlock, handle, DXF);
+        findBlock(cadBlock, handle, DXF);
 
         deleteThings(EntitiesMap,todelete);
     }
-    private static void GetAttributes(CADBlock cadBlock, String handle, DXFDrawing DXF, Map<String, String> todelete ) {
+    private static void getAttributes(CADBlock cadBlock, String handle, DXFDrawing DXF, Map<String, String> todelete ) {
         for (String keyATT : EntitiesMap.keySet()) {
-            Entity entity = DXF.getEntities().getEntities().get(keyATT);
+            Entity entity = DXF.getEntities().getEntitiesMap().get(keyATT);
             if (handle.equals(entity.getParentHandle())) {
-                cadBlock.BlockAttribs(cadBlock, entity);
+                cadBlock.blockAttribs(cadBlock, entity);
                 //add to the list to delete later
                 todelete.put(entity.getHandle(), entity.getHandle()); //remove object after using it so next loop is a little faster
             }
         }
     }
-    private static void FindBlock(CADBlock cadBlock, String handle, DXFDrawing DXF) {
+    private static void findBlock(CADBlock cadBlock, String handle, DXFDrawing DXF) {
         for (String keyBlockRecords : DXF.getTables().getBlockRecord().keySet()){
             Tables.BlockRecord blockRecord = DXF.getTables().getBlockRecord().get(keyBlockRecords);
             String BlockRecordHandle = null;
@@ -95,12 +96,12 @@ public class CADBlock {
                 if ((blockRecord.getChildHandle(i).equals(handle))) {
                     BlockRecordHandle = blockRecord.getHandle();
                     //now find Block that has Parent Handle = block_record handle
-                    FindBlockRecord(cadBlock,BlockRecordHandle, DXF);
+                    findBlockRecord(cadBlock,BlockRecordHandle, DXF);
                 }
             }
         }
     }
-    private static void FindBlockRecord(CADBlock cadblock, String BlockRecordHandle, DXFDrawing DXF) {
+    private static void findBlockRecord(CADBlock cadblock, String BlockRecordHandle, DXFDrawing DXF) {
         for (String keyBlock : DXF.getBlocks().getBlocks().keySet()) {
             //iterate through Blocks ATTDEF, SOLID, WIPEOUT
             Block block = DXF.getBlocks().getBlocks().get(keyBlock);

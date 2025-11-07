@@ -68,10 +68,4 @@ public class Polyline {
         }
         return length;
     }
-
-    public void createCables(Entity entity, Polyline polyline, DXFDrawing DXF) {
-        polyline.polylineAttribs(polyline, entity);
-        ExampleCables.put(polyline.getHandle(), polyline);
-    }
-
 }

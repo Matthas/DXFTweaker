@@ -1,5 +1,6 @@
 package com.Matthas.windows;
 
+import com.Matthas.exportTools.csvExport.CSVExport;
 import com.Matthas.cadObjects.CADObjects;
 import com.Matthas.dxfRead.DXFReader;
 import com.Matthas.misc.MessageConsole;
@@ -13,7 +14,7 @@ import java.awt.event.ActionListener;
 public class MainMenu extends JFrame{
     private JPanel panel1;
     private JButton buttonDXFRead;
-    private JButton buttonObjectsLoad;
+    private JButton buttonExportCSV;
     private JTextPane textPane1;
 
     private String[] aryLines;
@@ -36,8 +37,8 @@ public class MainMenu extends JFrame{
         buttonDXFRead.setPreferredSize(new Dimension(200, 30));
 
         //button for Load Objects
-        buttonObjectsLoad = new JButton("Load Objects");
-        buttonObjectsLoad.setPreferredSize(new Dimension(200, 30));
+        buttonExportCSV = new JButton("Export to CSV");
+        buttonExportCSV.setPreferredSize(new Dimension(200, 30));
 
 
         textPane1 = new JTextPane();
@@ -51,7 +52,7 @@ public class MainMenu extends JFrame{
 
         JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
         buttonPanel.add(buttonDXFRead);
-        buttonPanel.add(buttonObjectsLoad);
+        buttonPanel.add(buttonExportCSV);
 
         this.add(buttonPanel, BorderLayout.NORTH);
         //this.add(button1, BorderLayout.WEST);
@@ -83,12 +84,16 @@ public class MainMenu extends JFrame{
             }
         });
 
-        //load Objects
-        buttonObjectsLoad.addActionListener(new ActionListener() {
+        //Export CSV
+        buttonExportCSV.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                new Thread(() -> {
+                    //CSVExport csvExport = new CSVExport(cad, dxf);
+                    CSVExport.createCSV(cad, dxf);
+                }).start();
                 //do nothing
-                System.out.println("this button does nothing :)");
+                System.out.println("this button does nothing :) ... for now");
             }
         });
     }
