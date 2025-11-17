@@ -11,6 +11,8 @@ public class ReadEntity {
     public Entity readEntity(Integer currentline, Integer length, String[] aryLines, Entity entity, Entities entities) {
         Coords coords = new Coords();
         Coords fitPoints = new Coords();
+        Coords tangentPoints = new Coords();
+        Coords alignmentPoints = new Coords();
         int i = currentline;
         String currentAppName = null;
         try { //print line where errors happens
@@ -112,32 +114,29 @@ public class ReadEntity {
                     case "440":
                         entity.setTransparency(Double.parseDouble(aryLines[i+1].trim()));
                         break;
-                    case " 10": //coords
-                        coords.addCoords(Double.parseDouble(aryLines[i + 1]), Double.parseDouble(aryLines[i + 3]));
-                        entity.setCoords(coords);
+                    case " 10": //X coord
+                        code10(coords, aryLines, i);
                         break;
-                    case " 11": //endpoints (I think)
-                        if (entity.getBlockname().equals("LINE")) {
-                            //Coords coords = new Coords();
-                            coords.addCoords(Double.parseDouble(aryLines[i + 1]), Double.parseDouble(aryLines[i + 3]));
-                            entity.setCoords(coords);
-                        } else if (entity.getBlockname().equals("SPLINE")){
-                            fitPoints.addCoords(Double.parseDouble(aryLines[i+1]), 0);
-                        }
+                    case " 20": //Y coords
+                        code20(coords, aryLines, i);
                         break;
-                    case " 12": //coords
-                        if (entity.getBlockname().equals("SPLINE")){
-                            fitPoints.addCoords(Double.parseDouble(aryLines[i+1]), 0);
-                            entity.getFitPoints().replaceCoordsXY(coords.size()-1 , coords.getrawNCoordX(coords.size()-1), Double.parseDouble(aryLines[i+1]));
-                            entity.setFitPoints(fitPoints);
-                        } else {
-                            coords.addCoords(Double.parseDouble(aryLines[i + 1]), Double.parseDouble(aryLines[i + 3]));
-                            entity.setCoords(coords);
-                        }
+                    case " 11": //endpoints (Line) or fitpoints for spline
+                        code11(entity, coords, fitPoints, aryLines, i, alignmentPoints);
                         break;
-                    case " 13": //coords
-                        coords.addCoords(Double.parseDouble(aryLines[i + 1]), Double.parseDouble(aryLines[i + 3]));
-                        entity.setCoords(coords);
+                    case " 21": //endpoints(Line) or fitpoints for spline
+                        code21(entity, coords, fitPoints, aryLines, i, alignmentPoints);
+                        break;
+                    case " 12": //tangentPoint start X
+                        code12(tangentPoints, aryLines, i);
+                        break;
+                    case " 22": //tangentPoint start Y
+                        code22(tangentPoints, aryLines, i);
+                        break;
+                    case " 13": //tangentPoint END X
+                        code13(tangentPoints, aryLines, i);
+                        break;
+                    case " 23": //tangentPoint END Y
+                        code23(tangentPoints, aryLines, i);
                         break;
                     case "1001":
                         currentAppName = aryLines[i + 1].trim();
@@ -216,6 +215,10 @@ public class ReadEntity {
                                 .put("LongInt", aryLines[i + 1].trim());
                         break;
                     case "  0":  //finish current entity
+                        entity.setCoords(coords);
+                        entity.setFitPoints(fitPoints);
+                        entity.setTextAlignmentPoint(alignmentPoints);
+                        fixColor(entity);
                         break innerloop;
                 }
 
@@ -263,6 +266,106 @@ public class ReadEntity {
             throw new IllegalArgumentException("Left function - Length cannot be less than 0");
         }
         return input.substring(0, Math.min(length, input.length()));
+    }
+
+    private void fixColor(Entity entity){
+        //if color is null set it to Bylayer = 256
+        if (entity.getColour() == null){
+            entity.setColour(256);
+        }
+    }
+
+    private void code10(Coords coords,String[] aryLines, int i) {
+        //now this can be summed to just one line, but I was trying to cover case where 10 20 30 are in random order
+        //however it only has chance to appear when dxf is created by some boogus software, so it's now useless
+        if (coords.size() > 0) {
+            if (coords.getrawNCoordX(coords.size()-1) == 0) {
+                coords.replaceCoordsXY(coords.size()-1,Double.parseDouble(aryLines[i+1]),coords.getrawNCoordY(coords.size()-1));
+            } else {
+                coords.addCoords(Double.parseDouble(aryLines[i + 1]), 0);
+            }
+        } else {
+            coords.addCoords(Double.parseDouble(aryLines[i + 1]), 0);
+        }
+    }
+
+    //similar to code10 but I gave up in middle
+    private void code11(Entity entity, Coords coords, Coords fitPoints, String[] aryLines, int i, Coords alignmentPoints){
+        if (entity.getBlockname().equals("LINE")) {
+            coords.addCoords(Double.parseDouble(aryLines[i + 1]), 0);
+        } else if (entity.getBlockname().equals("SPLINE")){
+            fitPoints.addCoords(Double.parseDouble(aryLines[i+1]), 0);
+            //entity.getFitPoints().replaceCoordsXY(coords.size()-1 , Double.parseDouble(aryLines[i+1]), coords.getrawNCoordY(coords.size()-1));
+            entity.setFitPoints(fitPoints);
+        } else if (entity.getBlockname().equals("Text") || entity.getBlockname().equals("MText")) {
+            alignmentPoints.addCoords(Double.parseDouble(aryLines[i+1]), Double.parseDouble(aryLines[i+3]));
+        }
+    }
+
+    private void code12(Coords tangentPoints, String[] aryLines, int i) {
+        double x = Double.parseDouble(aryLines[i + 1]);
+        if (tangentPoints.size() > 0) {
+            tangentPoints.replaceCoordsXY(0, x, tangentPoints.getrawNCoordY(0));
+        } else {
+            tangentPoints.addCoords(x, 0); // Start tangent at index 0
+        }
+    }
+
+    private void code13(Coords tangentPoints, String[] aryLines, int i) {
+        double x = Double.parseDouble(aryLines[i + 1]);
+        if (tangentPoints.size() > 1) {
+            tangentPoints.replaceCoordsXY(1, x, tangentPoints.getrawNCoordY(1));
+        } else if (tangentPoints.size() == 1) {
+            tangentPoints.addCoords(x, 0); // End tangent at index 1
+        } else {
+            tangentPoints.addCoords(0, 0); // Ensure index 0 exists
+            tangentPoints.addCoords(x, 0);
+        }
+    }
+
+    private void code20(Coords coords, String[] aryLines, int i){
+        if (coords.size() > 0) {
+            if (coords.getrawNCoordY(coords.size() - 1) == 0 ) {
+                coords.replaceCoordsXY(coords.size()-1, coords.getrawNCoordX(coords.size()-1), Double.parseDouble(aryLines[i+1]));
+            } else {
+                coords.addCoords(0, Double.parseDouble(aryLines[i + 1]));
+            }
+        } else {
+            coords.addCoords(0, Double.parseDouble(aryLines[i + 1]));
+        }
+    }
+
+    private void code21(Entity entity, Coords coords, Coords fitPoints, String[] aryLines, int i, Coords alignmentPoints) {
+        if (entity.getBlockname().equals("LINE")) {
+            coords.addCoords(coords.getrawNCoordX(coords.size()-1), Double.parseDouble(aryLines[i + 1]));
+        } else if (entity.getBlockname().equals("SPLINE")){
+            fitPoints.addCoords(fitPoints.getrawNCoordX(fitPoints.size()-1), Double.parseDouble(aryLines[i+1]));
+            //entity.getFitPoints().replaceCoordsXY(coords.size()-1 , Double.parseDouble(aryLines[i+1]), coords.getrawNCoordY(coords.size()-1));
+            entity.setFitPoints(fitPoints);
+        } else if (entity.getBlockname().equals("Text") || entity.getBlockname().equals("MText")) {
+            alignmentPoints.addCoords(Double.parseDouble(aryLines[i+1]), Double.parseDouble(aryLines[i+3]));
+        }
+    }
+
+    private void code22(Coords tangentPoints, String[] aryLines, int i) {
+        double y = Double.parseDouble(aryLines[i + 1]);
+        if (tangentPoints.size() > 0) {
+            tangentPoints.replaceCoordsXY(0, tangentPoints.getrawNCoordX(0), y);
+        } else {
+            tangentPoints.addCoords(0, y); // Start tangent at index 0
+        }
+    }
+
+    private void code23(Coords tangentPoints, String[] aryLines, int i) {
+        double y = Double.parseDouble(aryLines[i + 1]);
+        if (tangentPoints.size() > 1) {
+            tangentPoints.replaceCoordsXY(1, tangentPoints.getrawNCoordX(1), y);
+        } else if (tangentPoints.size() == 1) {
+            tangentPoints.addCoords(0, y); // End tangent at index 1
+        } else {
+            tangentPoints.addCoords(0, 0); // Ensure index 0 exists
+            tangentPoints.addCoords(0, y);
+        }
     }
     private void code40(Entity entity, String[] aryLines, int i) {
         switch (entity.getBlockname()) {
@@ -326,6 +429,10 @@ public class ReadEntity {
             case "DIMSTYLE":
                 entity.setExtensionLength(Double.parseDouble(aryLines[i+1].trim()));
                 break;
+            case "Text":
+            case "MTEXT":
+                entity.setTextWidthFactor(Double.parseDouble(aryLines[i+1].trim()));
+                break;
         }
     }
 
@@ -370,13 +477,15 @@ public class ReadEntity {
             case "ARC":
                 entity.setEndAngle(Double.parseDouble(aryLines[i + 1].trim())); // degrees
                 break;
-
             case "ELLIPSE":
                 entity.setEndParameter(Double.parseDouble(aryLines[i + 1].trim())); // radians
                 break;
-
             case "DIMENSION":
                 entity.setEndAngle(Double.parseDouble(aryLines[i + 1].trim())); // if used for arc dimension
+                break;
+            case "Text":
+            case "MTEXT":
+                entity.setObliqueAngle(Double.parseDouble(aryLines[i+1].trim()));
                 break;
         }
     }

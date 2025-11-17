@@ -4,19 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4eba9fed-f782-406f-86c7-0a788d7c1ca5" name="Changes" comment="Remove example block. Moved to catch-all Main class for blocks.&#10;All autocadblock will now be catched as just CADBLock class.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/cadObjects/CadElements/CADLine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/exportTools/csvExport/CSVExport.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/exportTools/csvExport/CSVWriter.java" afterDir="false" />
+    <list default="true" id="4eba9fed-f782-406f-86c7-0a788d7c1ca5" name="Changes" comment="futher works for csv export">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/cadObjects/CadElements/CADText.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Matthas/cadObjects/CADObjects.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/cadObjects/CADObjects.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Matthas/cadObjects/CadBlocks/CADBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/cadObjects/CadElements/CADBlock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Matthas/cadObjects/Polyline.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/cadObjects/Polyline.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Matthas/dxfRead/DXFDrawing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/dxfRead/DXFDrawing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Matthas/dxfRead/dxfElements/entities/Entities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/dxfRead/dxfElements/entities/Entities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Matthas/cadObjects/CadElements/CADLine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/cadObjects/CadElements/CADLine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Matthas/dxfRead/dxfElements/entities/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/dxfRead/dxfElements/entities/Entity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Matthas/dxfRead/dxfElements/entities/ReadEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/dxfRead/dxfElements/entities/ReadEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Matthas/windows/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/windows/MainMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -272,7 +266,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762245373846</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="futher works for csv export">
+      <option name="closed" value="true" />
+      <created>1762519085378</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1762519085378</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -295,7 +297,8 @@
     <MESSAGE value="Renaming fixes + adding example of DXFGroup and DXFDctionary" />
     <MESSAGE value="Merge remote-tracking branch 'origin/main'" />
     <MESSAGE value="Remove example block. Moved to catch-all Main class for blocks.&#10;All autocadblock will now be catched as just CADBLock class." />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove example block. Moved to catch-all Main class for blocks.&#10;All autocadblock will now be catched as just CADBLock class." />
+    <MESSAGE value="futher works for csv export" />
+    <option name="LAST_COMMIT_MESSAGE" value="futher works for csv export" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -307,16 +310,24 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/Matthas/cadObjects/CADObjects.java</url>
-          <line>29</line>
+          <line>33</line>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/Matthas/exportTools/csvExport/CSVExport.java</url>
+          <line>68</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="com.Matthas.dxfRead.dxfElements.objects.DXFObject" memberName="ObjectType" />
+      </pinned-members>
+    </pin-to-top-manager>
     <watches-manager>
       <configuration name="Application">
-        <watch expression="((HashMap.Node)((HashMap)objects.Objects).entrySet().toArray()[0]).getValue()" custom="java.util.HashMap.Node,java.util.HashMap" />
-        <watch expression="((LinkedHashMap)cad.ObjectsDatabase).entrySet().toArray()[2]" custom="java.util.LinkedHashMap" />
-        <watch expression="DXF.Entities.Inserts" />
+        <watch expression="DXF.DXFObjects.DXFObjectsMap.get(&quot;13B8E59&quot;)" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>
@@ -425,6 +436,12 @@
           <option name="totalLines" value="5943" />
           <option name="info" value="Remove example block. Moved to catch-all Main clas" />
         </TimePoint>
+        <TimePoint>
+          <option name="timestamp" value="1762519085435" />
+          <option name="linesCode" value="2344" />
+          <option name="totalLines" value="6403" />
+          <option name="info" value="futher works for csv export" />
+        </TimePoint>
       </list>
     </option>
     <option name="genericTimePoints">
@@ -466,9 +483,9 @@
           <option name="info" value="4 Nov 2025" />
         </TimePoint>
         <TimePoint>
-          <option name="timestamp" value="1762514012110" />
-          <option name="linesCode" value="2298" />
-          <option name="totalLines" value="6359" />
+          <option name="timestamp" value="1762519085435" />
+          <option name="linesCode" value="2344" />
+          <option name="totalLines" value="6403" />
           <option name="info" value="7 Nov 2025" />
         </TimePoint>
       </list>

@@ -33,6 +33,7 @@ public class Entity {
     private Double Rotation;
     private Double TextHeight;
     private String TextStyle;
+    private Double TextWidthFactor;
     private Integer PolylineFlag;
     private String EntityType;
     private Double PatternScale;
@@ -48,8 +49,11 @@ public class Entity {
     private Double ExtensionLength;
     private Double Bulge;
     private Double AxisRatio; //Ratio of minor axis to major axis
+    private Double ObliqueAngle;
     Coords coords = new Coords();
-    Coords FitPoints = new Coords();
+    Coords fitPoints = new Coords();
+    Coords tangentPoints = new Coords();
+    private Coords TextAlignmentPoint;
     private String ErrorString;
     private Double ScaleX;
     private Double ScaleY;
