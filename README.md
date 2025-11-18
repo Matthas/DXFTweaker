@@ -2,20 +2,32 @@ Please bear in mind, this is a project I learned Java on, so use it with caution
 
 The compiled jar file can be found in out/artefacts.
 
-**Only 2D is supported. Trying to export/work on a 3D drawing will result in the 3rd dimension (Z axis) being omitted.**
+<h1 style="font-size:40px;">About</h1>
+This is my small project on which I have been studying JAVA. I tried my best to make the code as readable as I could and to try to follow the design principles I have learn/heard.
+
+From the user perspective, the app can convert a **DXF file into a CSV file** (please read below what elements are supported).
+
+From the developer's perspective. The app parses the entire DXF drawing file and store each element in a separate HashMap so further work can be achieved without needing extensive knowledge of DXF.
+After loading the DXF file, the app pauses work with the created hashmaps for:
+- separate DXF elements like polyline, line, point, inserts,
+- HashMap of AutoCAD Blocks (predefined by user in Autocad file),
+- Each Block element also contains HashMap of all subelements that make up that block.
+
+<h3 style="font-size:5px;">Only 2D is supported. Trying to export/work on a 3D drawing will result in the 3rd dimension (Z axis) being omitted.</h3>
 
 
-Not every DXF structure is fully supported.
+<h1 style="font-size:40px;">List of supported elements</h1>
+<h4><b>Full Support</b></h4>
 
-Full support
-- LINE
+- LINE  
 - LWPOLYLINE
 - POLYLINE
 - BLOCK
 - TEXT
 - MTEXT
+ 
+<h4><b>Full Support</b> (not all attributes are supported, or no tests have been done)</h4>
 
-Partial Support (not all attributes are supported, or no tests have been done)
 - ARC (length, export of arc-related attributes, xdata)
 - Spline (as above)
 - Circle (as above)
@@ -23,7 +35,8 @@ Partial Support (not all attributes are supported, or no tests have been done)
 - SOLID (only as part of BLOCK)
 - VERTEX (only as part of BLOCK or polyline)
 
-No Support at all:
+<h4><b>No support at all</b></h4>
+
 - Rectangle, 3DFace, Trace (no support at all)
 - POLYFACE MESH
 - BODY
