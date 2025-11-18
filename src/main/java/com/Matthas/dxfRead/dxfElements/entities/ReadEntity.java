@@ -13,6 +13,7 @@ public class ReadEntity {
         Coords fitPoints = new Coords();
         Coords tangentPoints = new Coords();
         Coords alignmentPoints = new Coords();
+        Coords EllipseAxis = new Coords();
         int i = currentline;
         String currentAppName = null;
         try { //print line where errors happens
@@ -108,6 +109,9 @@ public class ReadEntity {
                     case "360":
                         entity.setSoftPointer(aryLines[i + 1]);
                         break;
+                    case "370":
+                        entity.setLineWeight(Double.parseDouble(aryLines[i+1].trim()));
+                        break;
                     case "420":
                         entity.setColour(Integer.parseInt(aryLines[i + 1].trim()));
                         break;
@@ -121,7 +125,7 @@ public class ReadEntity {
                         code20(coords, aryLines, i);
                         break;
                     case " 11": //endpoints (Line) or fitpoints for spline
-                        code11(entity, coords, fitPoints, aryLines, i, alignmentPoints);
+                        code11(entity, coords, fitPoints, aryLines, i, alignmentPoints, EllipseAxis);
                         break;
                     case " 21": //endpoints(Line) or fitpoints for spline
                         code21(entity, coords, fitPoints, aryLines, i, alignmentPoints);
@@ -218,6 +222,7 @@ public class ReadEntity {
                         entity.setCoords(coords);
                         entity.setFitPoints(fitPoints);
                         entity.setTextAlignmentPoint(alignmentPoints);
+                        entity.setEllipseAxis(EllipseAxis);
                         fixColor(entity);
                         break innerloop;
                 }
@@ -290,7 +295,7 @@ public class ReadEntity {
     }
 
     //similar to code10 but I gave up in middle
-    private void code11(Entity entity, Coords coords, Coords fitPoints, String[] aryLines, int i, Coords alignmentPoints){
+    private void code11(Entity entity, Coords coords, Coords fitPoints, String[] aryLines, int i, Coords alignmentPoints, Coords ellipseAxis){
         if (entity.getBlockname().equals("LINE")) {
             coords.addCoords(Double.parseDouble(aryLines[i + 1]), 0);
         } else if (entity.getBlockname().equals("SPLINE")){
@@ -299,6 +304,8 @@ public class ReadEntity {
             entity.setFitPoints(fitPoints);
         } else if (entity.getBlockname().equals("Text") || entity.getBlockname().equals("MText")) {
             alignmentPoints.addCoords(Double.parseDouble(aryLines[i+1]), Double.parseDouble(aryLines[i+3]));
+        } else if (entity.getBlockname().equals("ELLIPSE")){
+            ellipseAxis.addCoords(Double.parseDouble(aryLines[i+1]), Double.parseDouble(aryLines[i+3]));
         }
     }
 
@@ -342,9 +349,9 @@ public class ReadEntity {
             fitPoints.addCoords(fitPoints.getrawNCoordX(fitPoints.size()-1), Double.parseDouble(aryLines[i+1]));
             //entity.getFitPoints().replaceCoordsXY(coords.size()-1 , Double.parseDouble(aryLines[i+1]), coords.getrawNCoordY(coords.size()-1));
             entity.setFitPoints(fitPoints);
-        } else if (entity.getBlockname().equals("Text") || entity.getBlockname().equals("MText")) {
-            alignmentPoints.addCoords(Double.parseDouble(aryLines[i+1]), Double.parseDouble(aryLines[i+3]));
-        }
+        } //else if (entity.getBlockname().equals("Text") || entity.getBlockname().equals("MText")) {
+           //no need, covered under code 11
+        //}
     }
 
     private void code22(Coords tangentPoints, String[] aryLines, int i) {

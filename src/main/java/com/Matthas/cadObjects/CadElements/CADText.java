@@ -22,6 +22,7 @@ public class CADText {
     private String Style;
     private Coords AlignmentPoint;
     private Double ObliqueAngle;
+    private Coords coords;
     private Map<String, Map<String, String>> ExtendedData = new LinkedHashMap<>();
 
     public static void createCADText(Entity entity, CADText cadText, DXFDrawing DXF) {
@@ -37,5 +38,26 @@ public class CADText {
         cadText.setAlignmentPoint(entity.getTextAlignmentPoint());
         cadText.setObliqueAngle(entity.getObliqueAngle());
         cadText.setExtendedData(entity.getExtendedData());
+        cadText.setCoords(entity.getCoords());
+
+        cadText.setDefaultValues();
+    }
+    private void setDefaultValues() {
+        // Common DXF defaults
+        if (this.Color == null) this.Color = 256; // BYLAYER
+        if (this.Layer == null) this.Layer = "0"; // Default layer
+        if (this.TextValue == null) this.TextValue = ""; // Empty text
+        if (this.Height == null) this.Height = 1.0; // Default text height
+        if (this.Rotation == null) this.Rotation = 0.0; // Default rotation
+        if (this.WidthFactor == null) this.WidthFactor = 1.0; // Default width factor
+        if (this.Style == null) this.Style = "STANDARD"; // Default text style
+        //if (this.AlignmentPoint == null) this.AlignmentPoint = new Coords(0.0, 0.0, 0.0); // Default alignment
+        if (this.ObliqueAngle == null) this.ObliqueAngle = 0.0; // Default oblique angle
+
+        // Coords for insertion point (TEXT uses 10,20,30)
+        //if (this.coords == null) this.coords = new Coords(0.0, 0.0, 0.0);
+
+        // Extended data
+        //if (this.ExtendedData == null) this.ExtendedData = new LinkedHashMap<>();
     }
 }

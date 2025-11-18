@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="DXFToolbox:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4eba9fed-f782-406f-86c7-0a788d7c1ca5" name="Changes" comment="futher works for csv export">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/cadObjects/CadElements/CADText.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/DXFToolbox_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Matthas/cadObjects/CADObjects.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/cadObjects/CADObjects.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Matthas/cadObjects/CadElements/CADLine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/cadObjects/CadElements/CADLine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Matthas/cadObjects/CadElements/CADText.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/cadObjects/CadElements/CADText.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Matthas/dxfRead/dxfElements/entities/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/dxfRead/dxfElements/entities/Entity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Matthas/dxfRead/dxfElements/entities/ReadEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/dxfRead/dxfElements/entities/ReadEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Matthas/exportTools/csvExport/CSVExport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/exportTools/csvExport/CSVExport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Matthas/exportTools/csvExport/CSVWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/exportTools/csvExport/CSVWriter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,30 +55,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main (1).executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.Main.executor&quot;: &quot;Debug&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.com.Matthas.main.Main.executor&quot;: &quot;Debug&quot;,
-    &quot;Application.main.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_directory_selection&quot;: &quot;C:/JavaProjects/DXFToolbox/src/main/java&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/JavaProjects/DXFToolbox&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/JavaProjects/DXFToolbox/src/main/java/com/Matthas/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.annotationProcessors&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main (1).executor": "Run",
+    "Application.Main.Main.executor": "Debug",
+    "Application.Main.executor": "Run",
+    "Application.com.Matthas.main.Main.executor": "Debug",
+    "Application.main.Main.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "kotlin-language-version-configured": "true",
+    "last_directory_selection": "C:/JavaProjects/DXFToolbox/src/main/java",
+    "last_opened_file_path": "C:/JavaProjects/DXFToolbox",
+    "onboarding.tips.debug.path": "C:/JavaProjects/DXFToolbox/src/main/java/com/Matthas/Main.java",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\JavaProjects\DXFTweaker\src\main\resources\Icons" />
@@ -274,7 +282,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762519085378</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="futher works for csv export">
+      <option name="closed" value="true" />
+      <created>1763380725982</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1763380725982</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -308,16 +324,10 @@
           <line>176</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/Matthas/cadObjects/CADObjects.java</url>
-          <line>33</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/Matthas/exportTools/csvExport/CSVExport.java</url>
-          <line>68</line>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
           <option name="timeStamp" value="5" />
-        </line-breakpoint>
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <pin-to-top-manager>
@@ -442,6 +452,12 @@
           <option name="totalLines" value="6403" />
           <option name="info" value="futher works for csv export" />
         </TimePoint>
+        <TimePoint>
+          <option name="timestamp" value="1763380726357" />
+          <option name="linesCode" value="2532" />
+          <option name="totalLines" value="6622" />
+          <option name="info" value="futher works for csv export" />
+        </TimePoint>
       </list>
     </option>
     <option name="genericTimePoints">
@@ -487,6 +503,18 @@
           <option name="linesCode" value="2344" />
           <option name="totalLines" value="6403" />
           <option name="info" value="7 Nov 2025" />
+        </TimePoint>
+        <TimePoint>
+          <option name="timestamp" value="1763391245081" />
+          <option name="linesCode" value="2723" />
+          <option name="totalLines" value="6858" />
+          <option name="info" value="17 Nov 2025" />
+        </TimePoint>
+        <TimePoint>
+          <option name="timestamp" value="1763452108415" />
+          <option name="linesCode" value="2780" />
+          <option name="totalLines" value="6951" />
+          <option name="info" value="18 Nov 2025" />
         </TimePoint>
       </list>
     </option>

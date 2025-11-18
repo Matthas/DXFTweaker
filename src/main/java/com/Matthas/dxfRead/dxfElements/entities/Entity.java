@@ -36,6 +36,7 @@ public class Entity {
     private Double TextWidthFactor;
     private Integer PolylineFlag;
     private String EntityType;
+    private Double LineWeight;
     private Double PatternScale;
     private Double ArrowSize;
     private Double ViewHeight;
@@ -48,6 +49,7 @@ public class Entity {
     private Double EndParameter;
     private Double ExtensionLength;
     private Double Bulge;
+    private Coords EllipseAxis;
     private Double AxisRatio; //Ratio of minor axis to major axis
     private Double ObliqueAngle;
     Coords coords = new Coords();
