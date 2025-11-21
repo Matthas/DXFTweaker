@@ -9,16 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4eba9fed-f782-406f-86c7-0a788d7c1ca5" name="Changes" comment="futher works for csv export">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/DXFToolbox_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
+    <list default="true" id="4eba9fed-f782-406f-86c7-0a788d7c1ca5" name="Changes" comment="Export to CSV complete - partally tested">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/exportTools/KMZConverterToDXF/KMLParsers/KMLParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/exportTools/KMZConverterToDXF/KMZObjects/KMLObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/exportTools/KMZConverterToDXF/KMZParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Matthas/cadObjects/CadElements/CADLine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/cadObjects/CadElements/CADLine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Matthas/cadObjects/CadElements/CADText.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/cadObjects/CadElements/CADText.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Matthas/dxfRead/dxfElements/entities/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/dxfRead/dxfElements/entities/Entity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Matthas/dxfRead/dxfElements/entities/ReadEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/dxfRead/dxfElements/entities/ReadEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Matthas/exportTools/csvExport/CSVExport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/exportTools/csvExport/CSVExport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Matthas/exportTools/csvExport/CSVWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/exportTools/csvExport/CSVWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Matthas/windows/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Matthas/windows/MainMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +53,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.KMZParser.executor": "Debug",
     "Application.Main (1).executor": "Run",
     "Application.Main.Main.executor": "Debug",
     "Application.Main.executor": "Run",
@@ -93,7 +90,20 @@
       <recent name="com.Matthas" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.com.Matthas.main.Main">
+  <component name="RunManager" selected="Application.KMZParser">
+    <configuration name="KMZParser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.Matthas.exportTools.KMZConverterToDXF.KMZParser" />
+      <module name="DXFToolbox" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.Matthas.exportTools.KMZConverterToDXF.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.Matthas.Main" />
       <module name="DXFToolbox" />
@@ -116,6 +126,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.KMZParser" />
         <item itemvalue="Application.com.Matthas.main.Main" />
         <item itemvalue="Application.Main" />
       </list>
@@ -290,7 +301,31 @@
       <option name="project" value="LOCAL" />
       <updated>1763380725982</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Export to CSV complete - partally tested">
+      <option name="closed" value="true" />
+      <created>1763461376742</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1763461376742</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Export to CSV complete - partally tested">
+      <option name="closed" value="true" />
+      <created>1763461473979</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1763461473979</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Export to CSV complete - partally tested">
+      <option name="closed" value="true" />
+      <created>1763461499895</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1763461499895</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -314,7 +349,8 @@
     <MESSAGE value="Merge remote-tracking branch 'origin/main'" />
     <MESSAGE value="Remove example block. Moved to catch-all Main class for blocks.&#10;All autocadblock will now be catched as just CADBLock class." />
     <MESSAGE value="futher works for csv export" />
-    <option name="LAST_COMMIT_MESSAGE" value="futher works for csv export" />
+    <MESSAGE value="Export to CSV complete - partally tested" />
+    <option name="LAST_COMMIT_MESSAGE" value="Export to CSV complete - partally tested" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -323,6 +359,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/Matthas/dxfRead/dxfElements/blocks/Blocks.java</url>
           <line>176</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/Matthas/exportTools/KMZConverterToDXF/KMZParser.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.NullPointerException" package="java.lang" />
@@ -458,6 +499,24 @@
           <option name="totalLines" value="6622" />
           <option name="info" value="futher works for csv export" />
         </TimePoint>
+        <TimePoint>
+          <option name="timestamp" value="1763461376791" />
+          <option name="linesCode" value="2794" />
+          <option name="totalLines" value="6974" />
+          <option name="info" value="Export to CSV complete - partally tested" />
+        </TimePoint>
+        <TimePoint>
+          <option name="timestamp" value="1763461474025" />
+          <option name="linesCode" value="2794" />
+          <option name="totalLines" value="6974" />
+          <option name="info" value="Export to CSV complete - partally tested" />
+        </TimePoint>
+        <TimePoint>
+          <option name="timestamp" value="1763461499945" />
+          <option name="linesCode" value="2794" />
+          <option name="totalLines" value="6974" />
+          <option name="info" value="Export to CSV complete - partally tested" />
+        </TimePoint>
       </list>
     </option>
     <option name="genericTimePoints">
@@ -511,9 +570,9 @@
           <option name="info" value="17 Nov 2025" />
         </TimePoint>
         <TimePoint>
-          <option name="timestamp" value="1763452108415" />
-          <option name="linesCode" value="2780" />
-          <option name="totalLines" value="6951" />
+          <option name="timestamp" value="1763463527189" />
+          <option name="linesCode" value="2794" />
+          <option name="totalLines" value="6974" />
           <option name="info" value="18 Nov 2025" />
         </TimePoint>
       </list>

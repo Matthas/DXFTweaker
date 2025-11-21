@@ -15,6 +15,7 @@ public class MainMenu extends JFrame{
     private JPanel panel1;
     private JButton buttonDXFRead;
     private JButton buttonExportCSV;
+    private JButton buttonKMZtoDXF;
     private JTextPane textPane1;
 
     private String[] aryLines;
@@ -36,9 +37,15 @@ public class MainMenu extends JFrame{
         buttonDXFRead = new JButton("DXF Load");
         buttonDXFRead.setPreferredSize(new Dimension(200, 30));
 
-        //button for Load Objects
+        //button for export to CSV
         buttonExportCSV = new JButton("Export to CSV");
         buttonExportCSV.setPreferredSize(new Dimension(200, 30));
+        buttonExportCSV.setEnabled(false);
+
+        //button for KMZ to DXF
+        buttonKMZtoDXF = new JButton("Convert KML");
+        buttonKMZtoDXF.setPreferredSize(new Dimension(200, 30));
+        buttonKMZtoDXF.setEnabled(true);
 
 
         textPane1 = new JTextPane();
@@ -53,6 +60,7 @@ public class MainMenu extends JFrame{
         JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
         buttonPanel.add(buttonDXFRead);
         buttonPanel.add(buttonExportCSV);
+        buttonPanel.add(buttonKMZtoDXF);
 
         this.add(buttonPanel, BorderLayout.NORTH);
         //this.add(button1, BorderLayout.WEST);
@@ -80,6 +88,7 @@ public class MainMenu extends JFrame{
                     dxf = dxfReader.getDXFDrawing();
                     cad = dxfReader.getCad();
                     aryLines = dxfReader.getAryLines();
+                    buttonExportCSV.setEnabled(true);
                 }).start();
             }
         });
